@@ -1,7 +1,7 @@
 {
   "name": "discord-typescript-boilerplate",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/infra/discord/app.js",
   "repository": "https://github.com/nathaans/discord-typescript-boilerplate.git",
   "author": "nathaank <nathankayk45@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "@types/node": "^17.0.31",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-descartes": "^1.0.3",
