@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@infra/*": ["infra/*"],
+      "@modules/*": ["modules/*"],
+      "@test/*": ["test/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}
