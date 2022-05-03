@@ -1,0 +1,36 @@
+{
+  "name": "discord-typescript-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nathaans/discord-typescript-boilerplate.git",
+  "author": "nathaank <nathankayk45@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:discord": "ts-node-dev -r dotenv/config -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules src/infra/discord/app.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "lint": "eslint ./ --ext \".js,.ts\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.14.0",
+    "eslint-config-descartes": "^1.0.3",
+    "husky": "^7.0.4",
+    "jest": "^28.0.3",
+    "ts-jest": "^28.0.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
