@@ -11,6 +11,11 @@
     "lint": "eslint ./ --ext \".js,.ts\"",
     "test": "jest"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
