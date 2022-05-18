@@ -1,16 +1,19 @@
-/* eslint-disable no-unused-vars */
+import { Client } from '@core/infra/Client';
+
 export type Emitter = 'on' | 'once'
 
-export abstract class Event <Client = any> {
-  client: Client;
+export abstract class Event <EventClient = Client> {
+  client: EventClient;
 
   name: string;
   emitter: Emitter;
 
-  constructor (client: Client, options: Omit<Event, 'client'>) {
+  constructor (client: EventClient, options: Omit<Event, 'client'>) {
     this.client = client;
     Object.assign(this, options);
   }
 
-  async override (...args: any): Promise<any> {}
+  override (...args: any[]): unknown {
+    return { args };
+  }
 }
