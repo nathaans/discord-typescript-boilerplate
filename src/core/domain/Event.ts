@@ -14,6 +14,6 @@ export abstract class Event <EventClient = Client> {
   }
 
   override (...args: any[]): unknown {
-    return { args};
+    return { args };
   }
 }
