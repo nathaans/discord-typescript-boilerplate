@@ -8,7 +8,7 @@ export class CommandInMemoryRepositoryRepository implements ICommandRepository {
     this.commands = [];
   }
 
-  getCommand (name: string): Command<any> {
+  getCommand (name: string): Command {
     return this.commands.find((command) => command.name === name);
   }
 

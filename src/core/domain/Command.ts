@@ -1,18 +1,20 @@
-/* eslint-disable no-unused-vars */
 import { ApplicationCommandOptionData } from 'discord.js';
+import { Client } from '@core/infra/Client';
 
-export abstract class Command <Client = any> {
-  client: Client;
+export abstract class Command <CommandClient = Client> {
+  client: CommandClient;
 
   name: string;
   description: string;
   devOnly: string;
   options?: ApplicationCommandOptionData[];
 
-  constructor (client: Client, options: Omit<Command, 'client'>) {
+  constructor (client: CommandClient, options: Omit<Command, 'client'>) {
     this.client = client;
     Object.assign(this, options);
   }
 
-  async execute (context: any): Promise<any> {}
+  execute (context: any): unknown {
+    return { context };
+  }
 }
