@@ -1,1 +1,3 @@
-const a = 'oi';
+import { client } from './client';
+
+client.connect();
