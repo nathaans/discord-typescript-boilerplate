@@ -11,4 +11,8 @@ export class Client extends DiscordClient {
 
     this.token = options.token;
   }
+
+  connect () {
+    return this.login(this.token);
+  }
 }
